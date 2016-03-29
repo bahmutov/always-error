@@ -1,7 +1,7 @@
 {
   "name": "always-error",
+  "version": "0.0.0-semantic-release",
   "description": "Ensure the argument is an instance of Error or convert it",
-  "version": "1.0.0",
   "author": "Gleb Bahmutov <gleb.bahmutov@gmail.com>",
   "bugs": "https://github.com/bahmutov/always-error/issues",
   "config": {
@@ -51,7 +51,8 @@
     "size": "t=\"$(npm pack .)\"; wc -c \"${t}\"; tar tvf \"${t}\"; rm \"${t}\";",
     "test": "npm run unit",
     "unit": "mocha src/*-spec.js",
-    "commit": "commit-wizard"
+    "commit": "commit-wizard",
+    "semantic-release": "semantic-release pre && npm publish && semantic-release post"
   },
   "devDependencies": {
     "ban-sensitive-files": "1.8.2",
@@ -63,6 +64,7 @@
     "nsp": "2.2.2",
     "pre-git": "3.7.1",
     "standard": "6.0.8",
-    "standard-format": "2.1.1"
+    "standard-format": "2.1.1",
+    "semantic-release": "^4.3.5"
   }
 }
